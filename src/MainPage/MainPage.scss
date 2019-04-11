@@ -1,0 +1,20 @@
+.bgp-main-page {
+  min-height: 100vh;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  background: rgb(221, 221, 221);
+  display: grid;
+  margin: auto;
+  grid-template-columns: 80px 150px 500px 150px 80px;
+  grid-template-rows: 25% 100px auto;
+  justify-content: center;
+}
+
+.bgp-header {
+  grid-area: 2 / 3;
+}
+
+.bgp-main-body {
+  grid-area: 3 / 3;
+}
