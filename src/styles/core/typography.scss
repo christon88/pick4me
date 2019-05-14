@@ -1,0 +1,61 @@
+/*
+ * Typhographic styles
+ */
+
+// Font-variables can be found in core/global-variables.scss
+
+* {
+  font-family: $roboto;
+  font-size: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $roboto-slab;
+}
+
+h1 {
+  font-size: rem-calc(34);
+}
+
+h2 {
+  font-size: rem-calc(20);
+}
+
+h3,
+h4,
+h5 {
+  font-size: rem-calc(16);
+}
+
+p,
+li {
+  font-weight: 500;
+}
+
+.ud-lead-paragraph {
+  font-size: rem-calc(18);
+
+  @media all and (max-width: $sm) {
+    font-size: rem-calc(16);
+  }
+}
+
+.ud-body-text {
+  font-size: rem-calc(16);
+  line-height: rem-calc(26);
+}
+
+.ud-body-text-small {
+  font-size: rem-calc(14);
+  line-height: rem-calc(20);
+}
