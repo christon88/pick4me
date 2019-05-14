@@ -8,9 +8,9 @@ const SignUp = () => (
 );
 
 const SignUpForm = () => {
-  const onSubmit = event => {};
+  const onSubmit = () => {};
 
-  const onChange = event => {};
+  const onChange = () => {};
 
   return <form onSubmit={onSubmit} />;
 };
