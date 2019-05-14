@@ -1,0 +1,33 @@
+/*
+ * Global variables for global styling and components
+ */
+
+// Font stacks
+$roboto-slab: "Roboto Slab", "Franklin Gothic Bold", Tahoma, serif;
+$roboto: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+
+// Bootstrap breakpoints
+$sm: 767px;
+$md: 992px;
+$lg: 1200px;
+
+// Drop-shadows
+$standard-box-shadow: 0 0 1px rgba(0, 0, 0, .07);
+$dark-box-shadow: 0 0 1px #d1d1d1;
+
+// Transition
+$quick-transition-speed: .15s;
+
+// Whitespace
+$ws-xs: 4px;
+$ws-sm: 8px;
+
+$padding-standard: 16px;
+$margin-standard: 32px;
+
+// Grid gaps
+$gap: 6px;
+$half-gap: 3px;
+
+$gap-sm: 4px;
+$half-gap-sm: 2px;

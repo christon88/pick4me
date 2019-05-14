@@ -1,0 +1,11 @@
+/*
+ * Grouping all global styling in one file
+ */
+
+@import './core/global-variables.scss';
+@import './core/accessibility.scss';
+@import './core/colors.scss';
+@import './core/bootstrap-overrides.scss';
+@import './core/functions.scss';
+@import './core/global.scss';
+@import './core/typography.scss';
