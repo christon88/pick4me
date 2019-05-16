@@ -1,8 +1,10 @@
 {
-  "name": "board-game-picker",
+  "name": "pick4me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@firebase/app-types": "^0.4.0",
+    "@firebase/util": "^0.2.15",
     "@types/jest": "24.0.11",
     "@types/node": "11.13.4",
     "@types/react": "16.8.13",
@@ -15,6 +17,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
+    "recomposer": "^0.2.5",
     "typescript": "3.4.3"
   },
   "scripts": {

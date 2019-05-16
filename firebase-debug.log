@@ -1,0 +1,25 @@
+[debug] [2019-05-16T08:48:42.097Z] ----------------------------------------------------------------------
+[debug] [2019-05-16T08:48:42.101Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-16T08:48:42.101Z] CLI Version:   6.9.2
+[debug] [2019-05-16T08:48:42.101Z] Platform:      win32
+[debug] [2019-05-16T08:48:42.101Z] Node Version:  v8.11.2
+[debug] [2019-05-16T08:48:42.104Z] Time:          Thu May 16 2019 10:48:42 GMT+0200 (W. Europe Daylight Time)
+[debug] [2019-05-16T08:48:42.104Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-16T08:48:42.134Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-16T08:48:42.135Z] > authorizing via signed-in user
+[debug] [2019-05-16T08:48:42.135Z] [iam] checking project pick-for-me-8c5b2 for permissions ["firebase.projects.get"]
+[debug] [2019-05-16T08:48:42.138Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pick-for-me-8c5b2:testIamPermissions  
+
+[debug] [2019-05-16T08:48:43.172Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-16T08:48:43.174Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/pick-for-me-8c5b2  
+ 
+[debug] [2019-05-16T08:48:44.042Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\consager\Documents\GitHub\BGP\pick-for-me'...
+[info] 
+[debug] [2019-05-16T08:48:44.045Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/821897007843/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-16T08:48:44.613Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: build
+[info] +  hosting: Local server: http://localhost:5000

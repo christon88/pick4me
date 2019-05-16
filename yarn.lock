@@ -892,7 +892,7 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
-"@firebase/app-types@0.4.0":
+"@firebase/app-types@0.4.0", "@firebase/app-types@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.4.0.tgz#bb2c651f3b275fef549050cff28af752839c75c0"
   integrity sha512-8erNMHc0V26gA6Nj4W9laVrQrXHsj9K2TEM7eL2IQogGSHLL4vet3UNekYfcGQ2cjfvwUjMzd+BNS/8S7GnfiA==
@@ -1040,7 +1040,7 @@
     "@firebase/storage-types" "0.2.11"
     tslib "1.9.3"
 
-"@firebase/util@0.2.15":
+"@firebase/util@0.2.15", "@firebase/util@^0.2.15":
   version "0.2.15"
   resolved "https://registry.yarnpkg.com/@firebase/util/-/util-0.2.15.tgz#727799e7c018cc946f8809cd5cc53b0ea32b4ed7"
   integrity sha512-XA6C4HkBOcUfDyvp/clq0MCFSuWSm3bPkolP689RCrGzjBs+bnCzC5a7by6Fq106zAQYeASwULJjTfVtZjKaaQ==
@@ -9911,6 +9911,11 @@ realpath-native@^1.0.0:
   integrity sha512-wlgPA6cCIIg9gKz0fgAPjnzh4yR/LnXovwuo9hvyGvx3h8nX4+/iLZplfUWasXpqD8BdnGnP5njOFjkUwPzvjA==
   dependencies:
     util.promisify "^1.0.0"
+
+recomposer@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/recomposer/-/recomposer-0.2.5.tgz#38bf6bf7706c5800046dc8c63b0d4a46bb2fc2e9"
+  integrity sha512-DFg1JC1D721UDIm8lb/pM59olHNPPvzuvglncfCt5XZ4BtCjYtp4sPPjmX5awTopTZtDKeN/5txUGjmzO9GBeA==
 
 recursive-readdir@2.2.2:
   version "2.2.2"
