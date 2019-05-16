@@ -2,23 +2,15 @@ import React, { useState } from "react";
 import "./SignUp.scss";
 import firebase from "../Firebase/Firebase";
 import "firebase/auth";
-import { createBrowserHistory } from "history";
 import { HOME } from "../../constants/routes";
+import { Redirect, withRouter } from "react-router-dom";
 
-const SignUp = () => (
-  <div>
-    <SignUpForm />
-  </div>
-);
-
-const SignUpForm = () => {
+const SignUp = withRouter(({ history }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [passwordOne, setPasswordOne] = useState("");
   const [passwordTwo, setPasswordTwo] = useState("");
-  const [error, setError] = useState("");
-
-  const history = createBrowserHistory();
+  const [error, setError] = useState(null);
 
   const isInvalid =
     passwordOne !== passwordTwo ||
@@ -26,17 +18,20 @@ const SignUpForm = () => {
     email === "" ||
     username === "";
 
-  const onSubmit = event => {
+  const handleSubmit = (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
+    setError(null);
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, passwordOne)
-      .then(() => history.push(HOME))
       .catch(error => setError(error.message));
+    console.log("donedone");
+    history.push(HOME);
+    // return <Redirect to={HOME} push={true} />;
   };
 
   return (
-    <form onSubmit={onSubmit} className="p4m-signUpForm">
+    <form onSubmit={handleSubmit} className="p4m-signUpForm">
       <input
         name="username"
         value={username || ""}
@@ -72,6 +67,6 @@ const SignUpForm = () => {
       {error && <p>{error}</p>}
     </form>
   );
-};
+});
 
 export default SignUp;
