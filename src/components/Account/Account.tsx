@@ -1,9 +1,12 @@
 import React from "react";
+import { AuthUserContext } from "../Session";
 
 const Account = () => (
-  <div>
-    <h1>Account</h1>
-  </div>
+  <AuthUserContext.Consumer>
+    {currentUser =>
+      currentUser && <p>Current user: {currentUser.displayName}</p>
+    }
+  </AuthUserContext.Consumer>
 );
 
 export default Account;

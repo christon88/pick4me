@@ -3,6 +3,7 @@ import "./SignIn.scss";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import firebase from "../Firebase/Firebase";
+import "firebase/auth";
 import { withRouter } from "react-router-dom";
 
 const SignIn = withRouter(({ history }) => {

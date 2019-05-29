@@ -12,21 +12,13 @@ import Account from "../Account/Account";
 import Admin from "../Admin/Admin";
 
 import * as ROUTES from "../../constants/routes";
+import { withAuthentication } from "../Session";
 
 const App = () => {
-  const [currentUser, setCurrentUser] = useState();
-
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged(authUser => {
-      authUser ? setCurrentUser(authUser) : setCurrentUser(null);
-    });
-    console.log(currentUser);
-  });
-
   return (
     <Router>
       <div>
-        <Navigation authUser={currentUser} />
+        <Navigation />
 
         <hr />
 
@@ -41,4 +33,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthentication(App);

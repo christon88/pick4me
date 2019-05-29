@@ -4,9 +4,13 @@ import "./Navigation.scss";
 
 import * as ROUTES from "../../constants/routes";
 import SignOut from "../SignOut/SignOut";
+import { AuthUserContext } from "../Session";
 
-const Navigation = ({ authUser }: any) =>
-  authUser ? <NavigationAuth /> : <NavigationNonAuth />;
+const Navigation = () => (
+  <AuthUserContext.Consumer>
+    {currentUser => (currentUser ? <NavigationAuth /> : <NavigationNonAuth />)}
+  </AuthUserContext.Consumer>
+);
 
 const NavigationAuth = () => (
   <div className="p4m-navigation">
