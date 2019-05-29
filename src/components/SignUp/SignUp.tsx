@@ -3,7 +3,7 @@ import "./SignUp.scss";
 import firebase from "../Firebase/Firebase";
 import "firebase/auth";
 import { HOME } from "../../constants/routes";
-import { Redirect, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 const SignUp = withRouter(({ history }) => {
   const [username, setUsername] = useState("");

@@ -2,14 +2,27 @@ import React, { useState } from "react";
 import "./SignIn.scss";
 import { Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
+import firebase from "../Firebase/Firebase";
+import { withRouter } from "react-router-dom";
 
-const SignIn = () => {
+const SignIn = withRouter(({ history }) => {
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(mail, password)
+      .then(() => history.push(ROUTES.HOME))
+      .catch(error => setError(error.message));
+  };
+
   return (
     <div className="p4m-signIn">
       <h2>Log In</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Email Adress"
@@ -25,7 +38,8 @@ const SignIn = () => {
           autoComplete="current-password"
           onChange={event => setPassword(event.target.value)}
         />
-        <button>Log In</button>
+        <button type="submit">Log In</button>
+        {error && <p>{error}</p>}
       </form>
       <a href="#">Forgot Password?</a>
       <p>
@@ -33,6 +47,6 @@ const SignIn = () => {
       </p>
     </div>
   );
-};
+});
 
 export default SignIn;
