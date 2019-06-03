@@ -4,6 +4,7 @@ import firebase from "../Firebase/Firebase";
 import "firebase/auth";
 import { HOME } from "../../constants/routes";
 import { withRouter } from "react-router-dom";
+import { auth } from "firebase";
 
 const SignUp = withRouter(({ history }) => {
   const [username, setUsername] = useState("");
@@ -24,6 +25,13 @@ const SignUp = withRouter(({ history }) => {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, passwordOne)
+      .then(() => {
+        auth().onAuthStateChanged(user => {
+          if (user) {
+            user.updateProfile({ displayName: username });
+          }
+        });
+      })
       .catch(error => setError(error.message));
     console.log("donedone");
     history.push(HOME);
