@@ -13,6 +13,7 @@ import Admin from "../Admin/Admin";
 
 import * as ROUTES from "../../constants/routes";
 import { withAuthentication } from "../Session";
+import PasswordForget from "../PasswordForget/PasswordForget";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route exact path={ROUTES.HOME} component={Home} />
         <Route exact path={ROUTES.ACCOUNT} component={Account} />
         <Route exact path={ROUTES.ADMIN} component={Admin} />
+        <Route exact path={ROUTES.PASSWORD_FORGET} component={PasswordForget} />
       </div>
     </Router>
   );

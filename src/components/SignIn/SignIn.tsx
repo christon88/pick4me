@@ -42,7 +42,7 @@ const SignIn = withRouter(({ history }) => {
         <button type="submit">Log In</button>
         {error && <p>{error}</p>}
       </form>
-      <a href="#">Forgot Password?</a>
+      <Link to={ROUTES.PASSWORD_FORGET}>Forgot password?</Link>
       <p>
         Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
       </p>
