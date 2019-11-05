@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./SignUp.scss";
 import firebase from "../Firebase/Firebase";
 import "firebase/auth";
+import "firebase/database";
 import { HOME } from "../../constants/routes";
 import { withRouter } from "react-router-dom";
-import { auth } from "firebase";
+import { auth, database } from "firebase";
 
 const SignUp = withRouter(({ history }) => {
   const [username, setUsername] = useState("");
@@ -29,6 +30,13 @@ const SignUp = withRouter(({ history }) => {
         auth().onAuthStateChanged(user => {
           if (user) {
             user.updateProfile({ displayName: username });
+            return firebase
+              .database()
+              .ref("users/" + user.uid)
+              .set({
+                username: username,
+                email: email
+              });
           }
         });
       })
@@ -45,7 +53,7 @@ const SignUp = withRouter(({ history }) => {
         value={username || ""}
         onChange={event => setUsername(event.target.value)}
         type="text"
-        placeholder="Full Name"
+        placeholder="Username"
       />
       <input
         name="email"
