@@ -1,5 +1,6 @@
 import React from "react";
+import firebase from "firebase";
 
-const AuthUserContext = React.createContext({ displayName: "Shut up" });
+const userContext = React.createContext({ user: firebase.auth().currentUser });
 
-export default AuthUserContext;
+export default userContext;

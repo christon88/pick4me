@@ -1,9 +1,9 @@
-import React from "react";
+import { useContext } from "react";
+import { userContext } from ".";
 
-const Session = () => (
-  <div>
-    <h1>Session</h1>
-  </div>
-);
+const useSession = () => {
+  const { user } = useContext(userContext);
+  return user;
+};
 
-export default Session;
+export default useSession;
