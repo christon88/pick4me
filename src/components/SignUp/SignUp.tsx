@@ -1,11 +1,8 @@
 import React, { useState } from "react";
 import "./SignUp.scss";
 import firebase from "../Firebase/Firebase";
-import "firebase/auth";
-import "firebase/database";
 import { HOME } from "../../constants/routes";
 import { withRouter } from "react-router-dom";
-import { auth, database } from "firebase";
 
 const SignUp = withRouter(({ history }) => {
   const [username, setUsername] = useState("");
@@ -27,7 +24,7 @@ const SignUp = withRouter(({ history }) => {
       .auth()
       .createUserWithEmailAndPassword(email, passwordOne)
       .then(() => {
-        auth().onAuthStateChanged(user => {
+        firebase.auth().onAuthStateChanged(user => {
           if (user) {
             user.updateProfile({ displayName: username });
             return firebase

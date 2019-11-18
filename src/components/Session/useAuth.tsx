@@ -6,7 +6,7 @@ const useAuth = () => {
     const user = firebase.auth().currentUser;
     return { initializing: !user, user };
   });
-  const onChange = user => {
+  const onChange = (user: firebase.User) => {
     setState({ initializing: false, user });
   };
 
